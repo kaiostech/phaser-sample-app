@@ -1,0 +1,30 @@
+{
+    "parser": "babel-eslint",
+    "extends": "standard",
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "env": {
+        "browser": true
+    },
+    "rules": {
+        "indent": [2, 4, { "SwitchCase": 1 }],
+        "no-undef": "error",
+        "semi": [2, "always"],
+        "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+        "keyword-spacing": [2, { "before": true, "after": true }],
+        "no-trailing-spaces": ["error", { "skipBlankLines": true }],
+        "no-unused-expressions": "off",
+        "import/no-unresolved": [2],
+        "space-before-function-paren": ["error", "never"]
+    },
+    "globals": {
+        "phaser": true,
+        "game": true
+    },
+    "settings": {
+        "import/core-modules": ["phaser", "pixi", "p2"]
+    },
+    "ignorePatterns": ["kaiads.v4.min.js", "navigator.js"]
+}

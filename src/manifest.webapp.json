@@ -1,0 +1,25 @@
+{
+    "version": "1.0.0",
+    "name": "Phaser 2 Sample App",
+    "description": "Phaser 2 Sample App which created by KaiOS.",
+    "type": "web",
+    "launch_path": "/index.html",
+    "fullscreen": "true",
+    "icons": {
+        "56": "/assets/icons/kaios_56.png",
+        "112": "/assets/icons/kaios_112.png"
+    },
+    "developer": {
+        "name": "Peter Wu",
+        "url": "https://kaiostech.com/"
+    },
+    "locales": {
+        "en-US": {
+            "name": "Phaser 2 Sample App",
+            "subtitle": "Phaser 2 Sample App",
+            "description": "Phaser 2 Sample App which created by KaiOS."
+        }
+    },
+    "categories": ["game"],
+    "default_locale": "en-US"
+}
