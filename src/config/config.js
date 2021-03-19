@@ -1,27 +1,42 @@
+import Phaser from 'phaser';
+
+// All configuration
 export default {
-    gameWidth: 240,
-    gameHeight: 320,
-    localStorageName: 'phaser2-sample-app-kaios',
-    webFonts: ['Goldman'],
+    type: Phaser.AUTO,
+    parent: 'content',
+    width: 240,
+    height: 320,
+    backgroundColor: '#000000',
+    webFonts: ['DotGothic16', 'Amatic SC'],
     style: {
         default: {
-            font: 'Goldman',
-            fontSize: '16px',
+            fontFamily: 'Amatic SC',
+            fontSize: '18px',
             fill: '#FFFFFF'
         },
-        center: {
-            font: 'Goldman',
-            fontSize: '16px',
-            fill: '#FFFFFF',
-            align: 'center'
+        start: {
+            fontFamily: 'Amatic SC',
+            fontSize: '30px',
+            fill: '#FFFFFF'
         },
-        wordWrap: {
-            font: 'Goldman',
-            fontSize: '16px',
-            fill: '#FFFFFF',
-            wordWrap: true,
-            wordWrapWidth: 200,
-            align: 'center'
+        logoText: {
+            fontFamily: 'Amatic SC',
+            fontSize: '60px',
+            fill: '#45CC94'
+        },
+        text: {
+            fontFamily: 'Amatic SC',
+            fontSize: '22px',
+            fill: '#FFFFFF'
+        },
+        textL: {
+            fontFamily: 'Amatic SC',
+            fontSize: '30px',
+            fill: '#FFFFFF'
         }
     }
 };
+
+export const WIDTH = 15;
+export const HEIGHT = 18;
+export const LENGTH = 15;

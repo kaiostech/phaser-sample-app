@@ -1,9 +1,9 @@
-# Phaser 2 + ES6 + Webpack.
-#### A sample app to create games with Phaser 2 + ES6 + Webpack for the KaiOS platform.
+# Phaser 3 + ES6 + Webpack.
+#### A sample app to create games with Phaser 3 + ES6 + Webpack for the KaiOS platform.
 
 ![Phaser+ES6+Webpack](doc/phaser-es6-webpack.png)
 
-### Phaser 3 supported in this branch: [Phaser 3 Sample App](https://github.com/kaiostech/phaser-sample-app/tree/phaser3)
+### Phaser 2 supported in this branch: [Phaser 2 Sample App](https://github.com/kaiostech/phaser-sample-app/)
 
 ## Features
 - ESLINT with JavaScript Standard Style configuration
@@ -15,7 +15,6 @@
 - PWA Support
 
 ## Plugins
-- Phaser Navigator for KaiOS
 - KaiAds
 
 # Setup

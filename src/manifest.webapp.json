@@ -1,7 +1,7 @@
 {
     "version": "1.0.0",
-    "name": "Phaser 2 Sample App",
-    "description": "Phaser 2 Sample App which created by KaiOS.",
+    "name": "Phaser 3 Sample App",
+    "description": "Phaser 3 Sample App which created by KaiOS.",
     "type": "web",
     "launch_path": "/index.html",
     "fullscreen": "true",
@@ -15,9 +15,9 @@
     },
     "locales": {
         "en-US": {
-            "name": "Phaser 2 Sample App",
-            "subtitle": "Phaser 2 Sample App",
-            "description": "Phaser 2 Sample App which created by KaiOS."
+            "name": "Phaser 3 Sample App",
+            "subtitle": "Phaser 3 Sample App",
+            "description": "Phaser 3 Sample App which created by KaiOS."
         }
     },
     "categories": ["game"],
