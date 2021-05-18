@@ -26,7 +26,7 @@ Navigate into your workspace directory.
 
 Run:
 
-```git clone https://github.com/kaiostech/phaser-sample-app.git```
+```git clone -b phaser3 https://github.com/kaiostech/phaser-sample-app.git```
 
 ## 2. Install node.js and npm:
 
