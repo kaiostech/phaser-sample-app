@@ -21,5 +21,9 @@
         }
     },
     "categories": ["game"],
-    "default_locale": "en-US"
+    "default_locale": "en-US",
+	"permissions": {
+		"mobiledata": {},
+		"wifidata": {}
+	}
 }

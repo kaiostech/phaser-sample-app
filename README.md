@@ -81,7 +81,7 @@ In the config file, you can specify which webfonts you want to include. In case 
 
 ## Run the app on a KaiOS device
 
-Follow [OS ENV Setup](https://developer.kaiostech.com/getting-started/env-setup/os-env-setup) and [Test your apps](https://developer.kaiostech.com/getting-started/build-your-first-package-app/test-your-apps)
+Follow [OS ENV Setup](https://developer.kaiostech.com/docs/02.getting-started/01.env-setup/os-env-setup) and [Test your apps](https://developer.kaiostech.com/docs/02.getting-started/03.build-your-first-package-app/test-your-apps)
 install in your device.
 
 
