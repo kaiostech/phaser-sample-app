@@ -2,11 +2,15 @@
     "name": "phaser2-sample-app",
     "version": "1.0.0",
     "description": "Phaser 2 Sample App",
-    "author": "KaiOS/Peter Wu",
+    "author": {
+        "name": "Peter Wu",
+        "email": "peter.wu@kaiostec.com"
+    },
     "main": "index.js",
     "scripts": {
-        "start": "webpack --mode development",
-        "build": "webpack --config webpack.production.config.js --mode production",
+        "start": "webpack --mode development --env VERSION=kai",
+        "build:kai": "webpack --config webpack.production.config.js --mode production --env VERSION=kai",
+        "build:kaiNext": "webpack --config webpack.production.config.js --mode production --env VERSION=kaiNext",
         "test": "eslint ./src/**/*.js"
     },
     "license": "MIT",
@@ -28,7 +32,9 @@
         "eslint-plugin-standard": "^5.0.0",
         "expose-loader": "^0.7.4",
         "filemanager-webpack-plugin": "^2.0.5",
+        "html-loader": "^0.5.5",
         "html-webpack-plugin": "^4.4.0",
+        "preprocess-loader": "^0.2.2",
         "terser-webpack-plugin": "^4.2.3",
         "uglifyjs-webpack-plugin": "^2.2.0",
         "webpack": "^4.46.0",

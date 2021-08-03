@@ -18,24 +18,11 @@ const p2 = path.join(phaserModule, 'build/custom/p2.js');
 
 const config = require('./package.json');
 
-const ENVIRONMENTS = {
-    // INCLUDED KAIADS
-    default: {
-        environment: 'default',
-        adsPackageName: 'KAI'
-    }
-};
-
 const definePlugin = new webpack.DefinePlugin({
     __DEV__: JSON.stringify(JSON.parse(process.env.BUILD_DEV || 'true'))
 });
 
 module.exports = (env, argv) => {
-    const BUILD_ENVIRONMENT = (env && env.BUILD_ENVIRONMENT) || 'default';
-    const appEnv = ENVIRONMENTS[BUILD_ENVIRONMENT];
-
-    appEnv.NODE_ENV = argv.mode || 'development';
-
     const date = new Date();
     let month = '' + (date.getMonth() + 1);
     let day = '' + date.getDate();
@@ -45,9 +32,23 @@ module.exports = (env, argv) => {
     if (day.length < 2) day = '0' + day;
 
     const dateStr = [year, month, day].join('-');
-    const scriptType = appEnv.NODE_ENV === 'production' ? 'PROD' : 'DEV';
+    const scriptType = argv.mode === 'production' ? 'PROD' : 'DEV';
+    const upperStrVersion = env.VERSION.toString().toUpperCase();
 
-    const packageName = `${config.name}__${config.version}_${scriptType}_${appEnv.adsPackageName}_${dateStr}`;
+    const packageName = `${config.name}__${config.version}_${scriptType}_${upperStrVersion}_${dateStr}`;
+
+    const manifestSwap = () => {
+        if (env.VERSION === 'kaiNext') {
+            return new CopyPlugin([
+                { from: 'manifestNext', to: '' },
+                { from: 'src/manifest.webmanifest.json', to: 'manifest.webmanifest' }
+            ]);
+        } else {
+            return new CopyPlugin([
+                { from: 'src/manifest.webapp.json', to: 'manifest.webapp' }]
+            );
+        }
+    };
 
     const webpackConfig = {
         devtool: 'source-map',
@@ -146,13 +147,18 @@ module.exports = (env, argv) => {
             new CopyPlugin([
                 { from: 'src/ads', to: 'ads' },
                 { from: 'src/assets', to: 'assets' },
-                { from: 'src/favicon.ico', to: 'favicon.ico' },
-                { from: 'src/manifest.webapp.json', to: 'manifest.webapp' }
-            ])
+                { from: 'src/favicon.ico', to: 'favicon.ico' }
+            ]),
+            manifestSwap()
         ],
         module: {
             rules: [
-                { test: /\.js$/, use: ['babel-loader'], include: path.join(__dirname, 'src') },
+                { test: /\.js$/, use: [{ loader: 'babel-loader' }], include: path.join(__dirname, 'src') },
+                {
+                    test: /\.html$/,
+                    use: [{ loader: 'html-loader' }, { loader: 'preprocess-loader', options: env }],
+                    include: path.join(__dirname, 'src')
+                },
                 { test: /pixi\.js/, use: ['expose-loader?PIXI'] },
                 { test: /phaser-split\.js$/, use: ['expose-loader?Phaser'] },
                 { test: /p2\.js/, use: ['expose-loader?p2'] }

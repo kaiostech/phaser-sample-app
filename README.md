@@ -11,8 +11,9 @@
 - Browsers are automatically updated as you change project files
 - Webpack ready
 - WebFont Loader
-- Multi-language support
-- PWA Support
+- Multi-language Supports
+- PWA Supports
+- KaiOS 3.0 Supports
 
 ## Plugins
 - Phaser Navigator for KaiOS
@@ -80,10 +81,17 @@ Before you get to work you will surely want to check the config file. You could 
 In the config file, you can specify which webfonts you want to include. In case you do not want to use webfonts simply leave the array empty.
 
 
+## For more information about this application
+
+Please check out our documentation for 2.5: [Develop using Phaser](https://developer.kaiostech.com/docs/development/build-your-first-game/develop-using-phaser)
+
+
 ## Run the app on a KaiOS device
 
-Follow [OS ENV Setup](https://developer.kaiostech.com/docs/02.getting-started/01.env-setup/os-env-setup) and [Test your apps](https://developer.kaiostech.com/docs/02.getting-started/03.build-your-first-package-app/test-your-apps)
+Follow [OS ENV Setup](https://developer.kaiostech.com/docs/getting-started/env-setup/os-env-setup) and [Test your apps](https://developer.kaiostech.com/docs/development/build-your-first-package-app/test-your-apps)
 install in your device.
+
+For 3.0, please follow [OS ENV Setup](https://developer.kaiostech.com/docs/sfp-3.0/02.getting-started/01.env-setup/os-env-setup) and [Test your apps](https://developer.kaiostech.com/docs/sfp-3.0/02.getting-started/03.build-your-first-package-app/test-your-apps)
 
 
 ## Contributors

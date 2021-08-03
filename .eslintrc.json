@@ -26,5 +26,5 @@
     "settings": {
         "import/core-modules": ["phaser", "pixi", "p2"]
     },
-    "ignorePatterns": ["kaiads.v4.min.js", "navigator.js"]
+    "ignorePatterns": ["kaiads.v5.min.js", "navigator.js"]
 }
