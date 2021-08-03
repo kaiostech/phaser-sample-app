@@ -20,7 +20,6 @@
   "b2g_features": {
     "version": "1.0.0",
     "subtitle": "Phaser 2 Sample App which created by KaiOS.",
-    "type": "web",
     "developer": {
       "name": "Peter Wu",
       "url": "https://kaiostech.com/"
