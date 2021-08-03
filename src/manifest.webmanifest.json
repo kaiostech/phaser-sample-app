@@ -19,7 +19,6 @@
   "b2g_features": {
     "version": "1.0.0",
     "subtitle": "Phaser 3 Sample App which created by KaiOS.",
-    "type": "web",
     "display": "fullscreen",
     "developer": {
       "name": "Peter Wu",
