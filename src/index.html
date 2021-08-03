@@ -7,8 +7,8 @@
         <meta name="HandheldFriendly" content="True" />
         <meta name="MobileOptimized" content="320" />
         <meta http-equiv="cleartype" content="on" />
-        <meta name="format-detection" content="telephone=no">
-        <meta name="theme-color" content="#ffffff">
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="theme-color" content="#ffffff" />
         <link rel="icon" href="favicon.ico" />
 
         <style>
@@ -16,20 +16,31 @@
             body {
                 margin: 0;
                 padding: 0;
-                height: 100%; 
+                height: 100%;
                 overflow: hidden;
+            }
+
+            @font-face {
+                font-family: Amatic SC;
+                src: url('./assets/font/AmaticSC-Regular.ttf');
+                font-weight: 400;
+                font-weight: normal;
             }
         </style>
 
         <!-- KaiAds -->
-        <!-- For KaiOS Device locally -->
-        <script src="ads/kaiads.v4.min.js"></script>
-
+        <!-- @if VERSION='kai' -->
         <!-- For Web Integration -->
-        <!-- <script src="https://static.kaiads.com/ads-sdk/ads-sdk.v4.min.js"></script> -->
+        <script src="https://static.kaiads.com/ads-sdk/ads-sdk.v5.min.js"></script>
+        <!-- @endif -->
+
+        <!-- @if VERSION='kaiNext' -->
+        <!-- For KaiOS Device locally -->
+        <script src="ads/kaiads.v5.min.js"></script>
+        <!-- @endif -->
     </head>
 
     <body>
-        <div id="content"></div>
+        <div id="content" style="font-family: Amatic SC"></div>
     </body>
 </html>
