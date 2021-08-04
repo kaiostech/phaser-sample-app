@@ -7,7 +7,7 @@ export default {
     width: 240,
     height: 320,
     backgroundColor: '#000000',
-    webFonts: ['DotGothic16', 'Amatic SC'],
+    webFonts: [],
     style: {
         default: {
             fontFamily: 'Amatic SC',
