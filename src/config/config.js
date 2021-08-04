@@ -2,7 +2,7 @@ export default {
     gameWidth: 240,
     gameHeight: 320,
     localStorageName: 'phaser2-sample-app-kaios',
-    webFonts: ['Goldman'],
+    webFonts: [],
     style: {
         default: {
             font: 'Goldman',
