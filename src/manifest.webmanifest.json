@@ -28,8 +28,11 @@
       "game"
     ],
     "permissions": {
-        "mobiledata": {},
-        "wifidata": {}
-    }
+      "mobiledata": {},
+      "wifidata": {}
+    },
+    "dependencies": {
+			"ads-sdk": "1.5.1"
+		}
   }
 }
